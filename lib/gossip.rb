@@ -2,12 +2,13 @@ class Gossip
  
   def initialize(author, content)
     @author = author
-    @content
+    @content = content
+    
   end
 
   def save
     CSV.open("./db/gossip.csv", "ab")
-      csv << ["Mon super auteur", "Ma super lecture"]
+      csv << [@author, @content]
   end
 
 end
