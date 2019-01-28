@@ -1,3 +1,5 @@
+require "csv"
+
 class Gossip
   def initialize(author, content)
     @author = author
@@ -5,9 +7,8 @@ class Gossip
   end
 
   def save
-    CSV = File.open("gossip.csv","ab")
-      csv << [@author, @content]
-    CSV.puts(csv)
+    CSV.open("./gossip.csv","a+") do |csv|
+       csv << [@author, @content]
     end
   end
- 
+end 
