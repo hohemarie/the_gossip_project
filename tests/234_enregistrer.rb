@@ -5,7 +5,7 @@ class Gossip
   end
 
   def save
-    CSV.open("./db/gossip.csv","ab")
-      csv << ["Mon super auteur", "Ma super"]
+    CSV.open("gossip.csv","ab")
+      csv << [@author, @content]
     end
   end
