@@ -1,3 +1,5 @@
 class Gossip
 
-  def 
+  def save
+  end
+end
